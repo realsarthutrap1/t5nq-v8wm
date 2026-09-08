@@ -1,0 +1,5 @@
+lab7
+a.out
+*.o
+.DS_Store
+.vscode/
