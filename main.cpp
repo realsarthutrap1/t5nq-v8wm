@@ -3,8 +3,10 @@
 #include <string>
 using namespace std;
 
-const int SIZE = 5
+const int SIZE = 5;
 
 int main() {
+    string *arr = new string[SIZE];
+
     return 0;
 }
