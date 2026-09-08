@@ -29,7 +29,7 @@ string* reverseArray(string *arr, int size) {
         arr[i] = arr[size - 1 - i];
         arr[size - 1 - i] = temp;
     }
-    retrun arr;
+    return arr;
 }
 
 void displayArray(string *arr, int size) {
