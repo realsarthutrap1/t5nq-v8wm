@@ -17,12 +17,25 @@ int main() {
     *(arr + 3) = "Joe";
     *(arr + 4) = "Junio";
 
+    cout << "Original array: ";
     displayArray(arr, SIZE);
     cout << endl;
+
+    arr = reverseArray(arr, SIZE);
+
+    cout << "Reversed array: ";
+    displayArray(arr, SIZE);
+    cout << endl;
+
+    delete[] arr;
+    arr = nullptr;
 
     return 0;
 }
 
+// reverseArray() reverses a dynamic string array in place
+// arguments: arr (pointer to strings), size (number of elements)
+// returns: pointer to the modified array
 string* reverseArray(string *arr, int size) {
     for (int i = 0; i < size / 2; i++) {
         string temp = *(arr + i);
@@ -32,6 +45,9 @@ string* reverseArray(string *arr, int size) {
     return arr;
 }
 
+// displayArray() prints the array elements on one line
+// arguments: arr (pointer to strings), size (number of elements)
+// returns: nothing
 void displayArray(string *arr, int size) {
     for (int i = 0; i < size; i++) {
         cout << *(arr + i);
