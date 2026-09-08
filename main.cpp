@@ -17,6 +17,10 @@ int main() {
     *(arr + 3) = "Joe";
     *(arr + 4) = "Junio";
 
+    cout << "first: " << *(arr) << endl;
+    displayArray(arr, SIZE);
+    cout << endl;
+
     return 0;
 }
 
@@ -25,4 +29,7 @@ string* reverseArray(string *arr, int size) {
 }
 
 void displayArray(string *arr, int size) {
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
 }
